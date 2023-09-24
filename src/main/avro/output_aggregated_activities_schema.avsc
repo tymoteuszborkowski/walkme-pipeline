@@ -1,0 +1,43 @@
+{
+  "type": "record",
+  "name": "AggregatedActivities",
+  "namespace": "com.walkme.domain.avro",
+  "fields": [
+    {
+      "name": "userId",
+      "type": "string"
+    },
+    {
+      "name": "environment",
+      "type": "string"
+    },
+    {
+      "name": "activities",
+      "type": {
+        "type": "array",
+        "items": {
+          "name": "SimplifiedActivity",
+          "type": "record",
+          "fields": [
+            {
+              "name": "activityType",
+              "type": "string"
+            },
+            {
+              "name": "startTimestamp",
+              "type": "long"
+            },
+            {
+              "name": "endTimestamp",
+              "type": [
+                "null",
+                "long"
+              ],
+              "default": null
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

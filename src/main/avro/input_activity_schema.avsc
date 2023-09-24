@@ -1,0 +1,31 @@
+{
+  "type": "record",
+  "name": "Activity",
+  "namespace": "com.walkme.domain.avro",
+  "fields": [
+    {
+      "name": "environment",
+      "type": "string"
+    },
+    {
+      "name": "userId",
+      "type": "string"
+    },
+    {
+      "name": "activityType",
+      "type": ["null", "string"],
+      "default": null
+    },
+    {
+      "name": "startTimestamp",
+      "type": ["null", "long"],
+      "default": null
+    },
+    {
+      "name": "endTimestamp",
+      "type": ["null", "long"],
+      "default": null
+    }
+
+  ]
+}
